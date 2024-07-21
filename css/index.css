@@ -1,0 +1,205 @@
+.workbench-font {
+    font-family: "Workbench", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "BLED" 0,
+        "SCAN" -13;
+}    
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(245, 231, 255);
+    margin-bottom: 60px;
+}
+
+section {
+    font-family: 'Lucida Sans';
+    font-style: italic;
+}
+
+section h1 {
+    color: blue;
+    text-decoration: underline;
+    font-weight: 900;
+    text-shadow: 2px 2px 2px rgb(135, 161, 176);
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensures the navigation bar spans the full width of the viewport */
+    z-index: 1000; /* Ensures it's on top of other elements */
+    background-color: rgb(170, 210, 245);
+}
+nav ul {
+    margin: 0;
+    height: 52px;
+}
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 12px;
+}
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 17px 10px;
+    color: black;  
+}
+nav ul li a:hover {
+    color: white;
+    text-shadow: 2px 1px 2px black;
+}
+
+#home, #bmi_calc, #simple_calc, #length_conv, #area_conv, #currency_conv, #leap_year, #rating {
+    height: 90vh;
+    padding: 80px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* To center-align text within the sections */
+}
+
+#home ul {
+    list-style-type: none;
+}
+
+#home span, #home li a {
+    transition: all 0.3s ease;
+}
+#home span:hover {
+    font-size: 80px;
+}
+#home li a:hover {
+    color: rgb(159, 61, 61);
+}
+#home a {
+    text-decoration: none;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background-color: rgb(170, 210, 245);
+    width: 100%;
+    text-align: right;
+}
+
+footer p {
+    padding-right: 20px;
+}
+
+#simple_calc table, #bmi_calc table, #leap_year table, #length_conv table, #area_conv table, #currency_conv table, #rating table {
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: left; /* To center-align text within the sections */
+    background-color: white;
+    padding: 10px;
+    border: 5px outset gray;
+
+}
+
+#bmi_display {
+    background-color: white;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#bmi_display th, #bmi_display td {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#bmi_calc button, #simple_calc button, #leap_year button, .rateSubmit {
+    text-align: center;
+    padding: 10px;
+    font-family: 'Lucida Sans';
+    font-style: italic;
+    font-size: 16px;
+}
+
+input[type="number"], input[type="text"] {
+    width: 200px;
+    height: 20px;
+}
+
+select {
+    width: 200px;
+    height: 30px;
+}   
+
+input[type="number"], input[type="text"], textarea, select {
+    font-family: 'Lucida Sans';
+    font-style: italic;
+    font-size: 16px;
+}
+
+#emoji1, #emoji2, #emoji3, #emoji4, #emoji5 {
+    display: none; /* Hide the default radio button */
+}
+
+.emoji-label {
+    cursor: pointer; /* Change cursor to pointer to indicate clickable */
+    font-size: 24px; /* Adjust font size as needed */
+    padding: 5px; /* Add padding to make the labels clickable */
+    font-style: normal;
+    transition: all 0.2s ease;
+}
+
+.emoji-label.enlarged {
+    font-size: 36px; /* Enlarged font size */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+}
+
+/* Style for the close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Style to visually hide the radio buttons */
+.emoji-radio {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
